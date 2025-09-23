@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animamtions in CSS</title>
+    <style>
+        body{
+            animation-name: changecolor;
+            animation-duration: 8s;
+            animation-delay: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;  /* fast medium slow at end */
+        }
+        h1{
+            animation-name: fadeIn;
+            animation-name: fadeOut;
+            animation-duration: 15s;
+        }
+        @keyframes changecolor{
+            0%{background-color: aqua;}
+            25%{background-color: blue;}
+            50%{background-color:blueviolet;}
+            75%{background-color: cadetblue;}
+            100%{background-color: deeppink;}
+        }
+
+        @keyframes fadeIn{   /* font will be lighter to brighter mode */
+            0%{
+            opacity: 0;
+           }
+           100%{
+            opacity: 1;
+           }
+        }
+           @keyframes fadeOut{
+            0%{
+            opacity: 0;
+           }
+           100%{
+            opacity: 1;
+           }
+    }
+      
+      @keyframes slide-in {
+        0% {
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+      }
+    </style>
+</head>
+<body>
+    <h1>Animations in CSS</h1>
+    <div class="slide-in">Slide In</div>
+</body>
+</html>

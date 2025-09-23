@@ -1,0 +1,61 @@
+/* tag/ ele selector */
+body {
+    background-color: burlywood;
+}
+h2 {
+    color:chartreuse;
+    background-color: rgb(22, 146, 105);
+}
+
+/* ID sel */
+#p1{
+    text-align: center;
+    text-decoration:underline;
+}
+
+/* class sel */
+.yp {
+    text-align: center;
+    color:brown;
+}
+.cen{
+    background-color: cadetblue;
+}
+
+/* universal sel */
+* {
+    font-style: italic;
+}
+
+/* group sel */
+.p3, .p5{
+    background-color:brown;
+}
+
+/*attribute sel */
+input[type="email"] {
+    background-color: cadetblue;
+}
+
+/*decedent sel */
+div p {
+    color:darkmagenta;
+}
+
+/*Child sel :-- when we remove > thzz become desendent & thzz property: value
+               will applied to all 3 child..*/
+ul > li {
+    list-style-type:circle;
+    color:rgb(228, 6, 6);
+    background-color: cornsilk;
+}
+
+/* Adjacent sibling */
+h2 + p1 {
+    color:rgb(219, 156, 72);
+}
+
+/* general siblings */
+h2 ~ div {
+    color:chartreuse;
+}

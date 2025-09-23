@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Form</title>
+</head>
+<body>
+    <form>
+    <h2>Captcha Form</h2>
+    <br>
+<!--Fieldset & legend:-- The <fieldset> element is used to group related elements within a form. 
+                        It's especially useful when you have several inputs that are logically connected, like user information, billing details, etc.
+                        Grouping inputs makes forms more readable and easier to navigate.
+                        
+            The <legend> element is used to provide a caption for a <fieldset>-->
+<fieldset>
+    <legend>Personal Details</legend>
+    <br>
+    <label for="cap">Enter Captcha* : </label>
+    <input type="text" id="cap" placeholder="Fill Captcha Here" name="cap1" title="captcha-fErR345" required>
+    <br>
+    <br> <!--If we don't want suggustion box in o/p use "auto-complete="off" " -->
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" placeholder="san23@gmail.com" aria-autocomplete="off"> 
+    <br>
+    <br>
+    <label for="un">User Name:</label> 
+    <input type="text" id="un">
+    <br>
+    <br>
+    <label for="pwd">Password * :</label>
+    <input type="password" id="pwd" placeholder="atleast 4 char long" name="pwd" required>
+    <br>
+    <br>
+    <label for="age">Age* : </label>
+    <input type="number" id="age" min="18" max="60" required>
+    <br>
+    <br>
+    <label for="date">DOB: </label> 
+    <input type="date" id="date" name="date1" min="1990-01-01" max="2030-12-31" title="Enter ur DOB">
+    <!--    <input type="hidden">   it will show  only label and hide d input box..--> 
+        </fieldset>
+    <br>
+    <br>
+<fieldset>
+    <legend>Additional information..</legend>
+    <br>
+    <label for="tm">Current Time</label>
+    <input type="time" id="tm" name="t">
+    <br>
+    <br>
+    <label for="url">Enter your LinkedIn Url: </label>
+    <input type="url" id="url" placeholder="https://www.linkedIn.com">
+    <br>
+    <br> <!--CheckBox:-- "Name" z  used to identify d wt type of checkbox it is & wt is contains..
+                          "Value" z given to server telling that their z an checkbox which as value like "html" 
+                              plz  pass  it  to server.
+                instead we  can use "ID" but server will not understand so we must use
+                        "Name" & "Value".. for Checkbox...-->
+    <label>
+        <input type="checkbox" value="html" name="html">HTML
+    </label>
+    <br>
+    <br>
+    <label>
+        <input type="checkbox" value="css" name="css">CSS
+    </label>
+    <br>
+    <br>
+    <label>
+        <input type="checkbox" value="JS" name="js">JavaScript
+    </label>
+    <br>
+    <br>
+
+    <!--Radio:-- here we  must give  same "name" to selct 1 option properly..-->
+    <label>
+        <input type="radio" name="gender" value="M">Male
+    </label>
+    <label>
+        <input type="radio" name="gender" value="F">Female
+    </label>
+    <label>
+        <input type="radio" name="gender" value="O">Others
+    </label>
+    <br>
+    <br>
+
+    <!--file-->
+    <label for="file">Upload your Resume</label>
+    <input type="file" id="file">
+    <br>
+    <br>
+
+    <!--Range-->
+    <label for="r">Rate yourself in frontend class</label>
+    <input type="range" id="r">
+    <br>
+    <br>
+
+    <!--DropDown list:-- allowing users to select one or multiple options from a predefined set of choices. 
+                         It’s useful when space is limited or when the user needs to choose from a list of many options.
+                <select> & <option> used..
+                        "name" attr will not used to send data to server instead ""Value"" attr used.. 
+                        this will not support "placeholder" attr instead of this we can use ""disable selected hidden"" as f/w code.. -->
+    <label for="sk">Skills: </label>
+    <select id="sk" name="Skills">
+        <option value="" disabled selected hidden>Choose skill which you like?</option>  
+        <option value="html">HTML5</option>
+         <option value="css">CSS3</option>
+         <option value="js">JavaScript</option>
+    </select>
+    </fieldset>
+  <br>
+  <br>
+
+  <!--TextArea:--- used to create a larger text input field where users can enter multiple lines of text. 
+                   It's commonly used for comment sections, feedback forms, or any place where more detailed input is required.
+                <textarea> used.. to resize textArea we use ""rows & cols"" attr.. -->
+    <label for="comm">Comments/Feedback:</label>
+    <textarea name="com" id="comm" placeholder="Enter your opinin..." rows="5" cols="30"> Enter your opnion here...
+    </textarea>
+    <br>
+    <br>
+    <input type="submit">
+    <input type="reset">
+</form>
+</body>
+</html>
+<!-- 
+1) HTML Date and Time Inputs: 
+Date
+Time
+Date Time Local
+Week
+Month
+
+2) "URL Input": Validating URL with HTTPS
+
+3) "HTML Checkboxes": Implementing Multiple Selections
+                    Using Name and Value Attributes
+
+4) "HTML Radio Buttons": Grouping Radio Buttons with Name Attribute
+                        Single Selection from Multiple Options
+
+5) "File Upload Input": Accepting Specific File Types
+                        Using Accept Attribute
+
+
+6) "HTML Range Input": Implementing Range Slider
+                       Attributes: Min, Max, Value
+-->

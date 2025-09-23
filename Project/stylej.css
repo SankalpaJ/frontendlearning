@@ -1,0 +1,83 @@
+body, h1, h2, h3, h4, p, ul {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f3ece3;
+  color: #333;
+  line-height: 1.8
+}
+
+header {
+  background-color: #dbae19;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 0.5rem;
+}
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: #fff3d6;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.products {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.products article {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.products img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+aside {
+  background: #ffebcd;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  border-left: 5px solid #d4af37;
+}
+
+footer {
+  background: #d4af37;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

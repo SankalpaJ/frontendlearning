@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformations in CSS</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+            transform: translate(50px, 100px);
+        }
+        div:hover{
+            transform: scale(5);
+            transition-duration: 3s; 
+            transition-timing-function: ease-in;
+            transition-delay: 1s;  /* or use only "transition-property" & give these 3 values.. */
+           
+            /* +ve => clockwise    -ve => anti-clockwise */
+            transform: rotate(45deg);
+            width: 250px;
+            height: 250px;
+
+            transform:skew(0deg, -40deg);
+
+            transform-origin: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+       hello
+    </div>
+</body>
+</html>

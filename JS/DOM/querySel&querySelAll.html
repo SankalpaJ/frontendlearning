@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) QuerySelector ==> which retruns 1 ele.. don't need indexing & it is static...
+         2) QuerySelectorAll ==> which return "node list".. which need indexing & it is also static...
+    -->
+
+    <h1 id="title">hi 1</h1>
+    <h1>hi 2</h1>
+    <h1 id="title">hi 3</h1>
+    <h1>hi 4</h1>
+    <script>
+        // query selectorAll : to access all <h1>
+       const p = document.querySelectorAll("#title");
+       p.forEach((t) => {
+        t.style.backgroundColor = "yellow";
+       })
+
+        const hh = document.querySelectorAll("h1");
+        hh.forEach((h1) => {
+            h1.style.color = "red";
+        })
+
+        // query selector
+        const h = document.querySelector("h1").innerHTML="<i>Hello <span style='color:blue'> 1 </span></i>";
+        h.style.color="red";
+        </script>
+</body>
+</html>

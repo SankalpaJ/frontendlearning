@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <!-- FORMS
+     1) Importance:-- Data Collection
+                      User interaction
+                      Transaction Processing
+                      User Authencation
+    2) Types:-- 1) Contact Forms
+                2) Login & registration form
+                3) search forms
+                4) order form
+                5) survey form-->
+
+    <h2>Captcha form</h2>
+    <form> 
+        <!-- to link b/w captcha and input field we are using "id", &  "for" attribute used in label
+             it means when ever the user will click on "Captcha" the input field will be highlighted to tell user
+               fill d captcha here in input field.. it shows interactive & user-friendly.
+            to provide wt d user as to fill in input box we use "placeholder" tag 
+           1) id & for attribute
+           2) placeholder
+           3) name:-- used to tell d server wtever d user will enter in input box and click on submit,
+                        it as to send data through url to sever with d name as "userCaptcha"
+                ex: 127.0.0.1.5500/HTML/forms1.html?userCaptcha=Fergh (userCaptcha-- name & Fergh-- used entered captcha)
+
+            4) <label> element is used to define a label for an input element.  
+            5) title: Provides additional information about the input field, which is displayed as a tooltip when the user hovers over the field.-->
+
+        <label for="userr">User Name *:</label>
+       <input type="text" id="userr" required 
+               placeholder="Enter your Name" name="username">
+        <br>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+        <br>
+        <br>
+        <label for="cap">Captcha *:</label>
+        <input type="text" id="cap" required 
+             placeholder="Enter captcha" name="userCaptcha"  title="Captcha - 4Rgfrh">
+        <br>
+        <br>
+        
+        <!-- <button type="Submit">Submit</button>
+              <button type="reset">Reset</button>   -->
+        <input type="Submit">
+        <input type="Reset"> <!--Pre defined values "Submit" & "Reset" so we are using "input" tags...-->
+        <button>Cancel</button>  <!-- Customise value Or User defined values we use "Button tags"-->
+    </form>
+</body>
+</html>
+<!--  1) Form Creation
+
+Tag: form
+Label: label
+Input Field: inputs
+Button: button
+Attributes: type, id, name, placeholder, required, title
+
+2)"Input Types": Text, Number, Email, Number Field Constraints (Min, Max)
+
+3)"Linking Label and Input": Attributes: for, id
+
+4)"Form Submission": Attributes: name, required
+
+5)"Visual Indicators": Placeholder, Title
+           
+6)"Validation": Required field, Email validation
+
+7)"Customized Buttons": Types: submit, reset, cancel
+
+-->

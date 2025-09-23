@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation form </title>
+</head>
+<!-- 1) start = ^
+    2) end = $
+    3) to specify range of num = {min , max}
+    4) firstName = "^[A-Za-z]{1,10}$"    ex: Surya
+    5) for Title-case = "^[A-Z]{1}[a-z]{1,}$"   ex: Sundar
+    6) firstName space lastName = "^[A-Z]{1}[a-z]{2,} [A-Za-z]{2,}$"-->
+<body>
+    <h2>Login Page</h2>
+    <form>
+    <label for="un">UserName:</label>
+    <input type="text" id="un" name="user" placeholder="Kiran" pattern="^[A-Z]{1}[a-z]{2,} [A-Za-z]{2,}$">
+    <!--within 10 char we can enter-->
+<br>
+<br>
+
+<!--Phone number validation
+    here don't use "Number" in input field it will not validate instead use "text"
+    234-234-2346 =>  "^/d{3}-/d{3}-/d{3}$" 
+
+    +91 starts with for only indian num & 1 digit should contain 6789 
+       => "^\+91 [6789]\d{2}-\d{3}-\d{4}$" -->
+    <label for="num">Phone Number:</label>
+    <input type="text" id="num" pattern="^\+91 [6789]\d{2}-\d{3}-\d{4}$">
+<br>
+<br>
+
+<!-- password validation 
+    . => any char
+    * => any num of times
+    {min, max} => range 
+    ?=  => +ve lookahead
+    ex: 1)  atleast 8 char =>  "^.{8,}$"
+        2)  without lookaheads =>  "^[A-Za-z/d!@#$%^&*]{8,}$"
+with lookahead => used to tell that d pswd should follow these specific rule(mandatory)...
+        3)  Upper,lwr & dig (8) => "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$"
+        4)  Strong pwd validation =>  "^(?=.*[a-z])(?=.*[A-Z])(?=.*/d)(?=.*[@#$%^&*])[A-Za-z\d@$%!^&*#]{12,}$" 
+        
+        5)  customised pswd:  "^(?=(.*\d){2,})(?=(.*[A-Z]){2,})(?=.*[!#%*])[A-Za-z\d!#%*]{10,}$"-->
+
+<label for="pwd">Password:</label>
+<input type="text" id="pwd" name="pd" pattern="^(?=(.*\d){2,})(?=(.*[A-Z]){2,})(?=.*[!#%*])[A-Za-z\d!#%*]{10,}$" title atleast 8 char long>
+   <br>
+   <br>
+
+<!--Email validation 
+    +  => concatinate
+    /.  => attach just dot(.)
+    .  =>  any no of char
+ex: surya@kodnest.com:-- here @kodnest z common to all name z d/f
+        "^.+@kodnest+\.[A-Za-z0-9]{2,}$" -->
+<label for="em">Email:</label>
+<input type="email" id="em" name="email" placeholder="surya@gmail.com"
+       pattern="^[a-zA-Z0-9._%+-#]+@[a-zA-z0-9]+/.[a-zA-Z]{2,}$"
+    <input type="submit">
+     </form>
+</body>
+</html>

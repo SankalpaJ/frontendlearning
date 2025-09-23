@@ -1,0 +1,16 @@
+h1 {
+    color:darkblue;
+    background-color: darkseagreen;
+}
+.nav {
+   background-color: bisque;
+   padding: 15px;
+   text-align: center;
+}
+.nav-tem {
+    color: chartreuse;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: bold;
+}

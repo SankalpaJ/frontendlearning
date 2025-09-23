@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class list properties</title>
+
+    <style>
+           .highlight {
+            background-color: rgb(238, 255, 0);
+            color:red;
+            text-align: center;
+           }
+            .body {      /*  here we are using class methods so we must use (.) not #,* etc in below code of js.  */
+            background-color: rgb(194, 226, 135)
+           }
+    </style>
+</head>
+<body>
+    <h2 id="heading">Welcome to JavaScript & try to learn it in smart way..</h2>
+    <button onclick="addhighlight()">Add Highlight</button>
+    <button onclick="removehighlight()">Remove Highlight</button>
+    <button onclick="togglehighlight()">Toggle Highlight</button>
+    <button onclick="checkhighlight()">Check Highlight</button>
+    <button onclick="togglebody()">Body Toggle</button>
+
+    <script>
+        h = document.getElementById("heading");  // selecting browser body by using "id" & stroing it in "h" targeting <h2> by using id
+        function addhighlight() {               // creating function for addhighlight() 
+            h.classList.add("highlight");      // after creating func() using "classList" property which offers add, remove & etc methods for cls..
+        }                            // & adding "highlights" to d <h2> or "h"
+
+        function removehighlight() {
+            h.classList.remove("highlight");
+        }
+
+        function togglehighlight() {
+            h.classList.toggle("highlight");
+        }
+
+        function checkhighlight() {
+            if(h.classList.contains("highlight"))  {     // using "h" just check wheather classList contains "highlights" or not
+                alert("Highlight class is present");
+        } 
+        else {
+            alert("Highlight class is NOT present");
+        }
+        }
+
+        hh = document.querySelector("body");
+        function togglebody() {
+        hh.classList.toggle("body");
+        }
+    </script>
+</body>
+</html>

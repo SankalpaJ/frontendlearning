@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+
+    <style>
+        div {
+            height: 100px;
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid green;
+            background-color: rgb(121, 240, 200);
+        } 
+    </style>
+</head>
+<body>
+    <h1>Welcome to Our Website </h1>
+    <button onclick="addBox()">Add Box</button>
+    <button onclick="removeBox()">Remove Box</button>
+
+    <script>
+        function addBox() {
+            b = document.querySelector("body");  // selecting <body> or from browser body & targeting by "querySelector" & stroing it in "b"
+           myDiv = document.createElement("div");  // creating <div> ele & storing it in , & upside "css div" z collected in "mydiv"
+           b.appendChild(myDiv);                // inside browser body(b) u add d "mydiv" by creating it using "appendChild"
+        }
+
+        function removeBox() {
+            b = document.querySelector("body");  // selecting <body> or from browser body & targeting it & stroing it in "b"
+            divItem = document.querySelector("div");  // inside browser body we are targeting div & stoirng it in "divItem"
+            b.removeChild(divItem);          //  removing <div> 
+        }
+    </script>
+</body>
+</html>
+<!--  1) content changing/modifying:-- Methods:  
+                                        * textContent:-- prints in newline, preserves line-break, spaces & etc
+                                        * innerHTML:--  gives o/p in single line w/o going to newline
+
+      2) changing style:   button(ele/tag).style.color(other properties)
+
+      3) Adding & removing ele:-- Methods:
+                                    * document.createElements()
+                                    * appendChild()
+                                    * removeChild()
+
+      4) Adding & removing classes:-- Methods:
+                                      * add()
+                                      * remove()
+                                      * toggle()
+                                      * contains()
+
+      5) Manipulating Attributes:-- Methods:
+                                      * setAttribute()
+                                      * getAttribute()
+                                      * removeAttribute()
+-->

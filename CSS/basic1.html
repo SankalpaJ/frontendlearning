@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--External CSS: 
+     1) <link href="sty.css" rel="stylesheet"> when we have html & css file in same folder..
+     2) <link href="frontend/CSS/sty.css">  when we have html & css seprate folder...-->
+
+    <link href="sty.css" rel="stylesheet">
+
+<!--Internal CSS-->
+    <style>
+          p {
+            color:cadetblue;
+            text-align: center;
+            background-color:bisque;
+          }
+
+          body {
+            background-color:darkcyan;
+          }
+    </style>
+</head>
+<body>
+    <!--Inline CSS:  1st priority given to thzzz,, &  
+             next which is nearer to that particular tag Internal or External based on that nxt priority-->
+    <p style="color:blueviolet; text-align: center;">Hello how are you? and what are you doing?</p>
+    
+    <p>Hello how are you?</p>
+
+    <h3>I am Sankalpa.......</h3>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Javascript</title>
+    <!-- 1) <script> tag inside head z ok, but before closing of body tag..
+         2) inside d body tag is better for javascript engine so <script> tag use inside <body>
+         3) outside d <body> is ok, but not recomanded!!! 
+            
+        types: Internal Js  & External Js-->
+        <script src="script1.js"></script>  <!--External Js-->
+</head>
+<body>
+    <button onclick="func()">Click me!!</button>
+    <!--Internal js...-->
+    <script>
+        function func() {
+            alert("I got executed..");
+        }
+        console.log("Welcome to JS world!!");   // to execute in d console.....
+        document.writeln("Welcome to JS world!!")  // to execute in chrome browser....
+        document.writeln("<br>")
+        document.writeln("Hello my dear...");
+    </script>
+</body>
+</html>

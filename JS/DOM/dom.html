@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Hello</h1>  <!-- accessing using "document.getElementsByTagName"  -->
+    <h1>Welcome</h1>
+    <h1>Js</h1>
+
+    <p>This is paragraph</p>
+    <p id="para" class="p">This is paragraph2</p>  <!-- accessing using "document.getElementByClassName" & "document.getElementById" -->
+    <p class="p">This is paragraph</p>
+
+    <button onclick="change()">click me</button>
+    <script>
+        document.getElementById("para").innerText = "This is new para....";
+        const paras = document.getElementsByClassName("p");
+        for(let  i = 0; i <= paras.length; i++) {
+            paras[i].style.backgroundColor = "blue";
+        }
+        function change() {
+/* 1) accessing "Hello" & changing it to "Welcome to JS" & giving style to it...  
+     but in this everytime we need to write "document.getElementsByTagName" 
+          & it seems like bad so we not use "innerText" we use below code as follows..
+   2) where we use "let" or "const" to declare & intialize like "h" & access using "h",, we use "textContent"... 
+   3) when we have document.getElementsByTagName(s) accessing it by using index values.bcz it stored in collections & returns multiple ele, otherwise not needed.. 
+   4) document.getElementsByTagName()  gives multiple ele as o/p..   */
+
+
+           // document.getElementsByTagName("h1")[0].innerText = "Welcome to js";
+           //  document.getElementsByTagName("h1")[0].style.color = "pink";
+
+            const h = document.getElementsByTagName("h1");
+
+/* to give bg-color to all <h1> we need to access 1  by 1 to avoid code repitation
+    we use for loop */
+            for(let heading = 0; heading < h.length; heading++) {
+                    h[heading].style.backgroundColor = "yellow";
+            }
+            h[0].textContent = "hiiiiiii";
+            h[0].style.fontSize = "50px";
+            h[1].style.backgroundColor = "green";
+        }
+    </script>
+</body>
+</html>
+<!--  1) DOM (Document Object Model) is a structured representation of your webpage. 
+      2) Think of it as a tree 🌲 where each HTML element is a branch or node.
+      3) Why is DOM Selection Important? 🛠️
+            Selecting elements is the first step in DOM manipulation. Without selecting an element, you can’t:
+                   * Change its content (like updating a heading).
+                   * Modify its style (like making a button red).
+                   * Add event listeners (like responding to a click or hover).
+       4) different ways JavaScript allows us to select elements from the DOM:--
+              1) document.querySelector()    ->   CSS Selector -- single ele returns -- static
+              2) document.querySelectorAll()  ->  CSS Selector -- multiple ele returns(node list) -- static
+              3) document.getElementById()    ->      Id           -- single ele            -- live
+              4) document.getElementsByClassName() ->  className  -- HTML Collection  --       live
+              5) document.getElemenetsByTagName()  ->  TagName  -- HTML Collection  --       live
+              6) document.getElementsByName()     -> ->  NameAttribute  -- NodeList  --       live
+
+-->
+

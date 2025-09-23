@@ -1,0 +1,70 @@
+/* :hover */
+.btn:hover{
+    background-color: blueviolet;
+    color:antiquewhite;
+    border:none;
+    cursor: pointer;
+}
+/* :focus */
+input[type=text]:focus{
+    background-color: chartreuse;
+}
+
+/* :nth-child() */
+table {
+    width: 50%;
+    height: 100px;
+}
+th,td {
+    border: 1px solid black;
+    padding: 10px;
+}
+tr:nth-child(odd) {
+    background-color: rgb(62, 158, 247);
+}
+
+/* :active */
+a {
+    color:crimson;
+}
+a:active {
+    color: cornflowerblue;
+}
+
+/* :first-child */
+.container div:first-child{
+    font-weight: bold;
+    background-color:rgb(99, 99, 228);
+}
+
+/* :last-child */
+.container div:last-child{
+    font-style: italic;
+    background-color: aquamarine;
+}
+
+/* :only-child */
+.container p:only-child{
+    background-color: darkolivegreen;
+    text-align: center;
+    font-weight: bold;
+    padding:10px;
+    margin:5px;
+}
+
+/* :not{ } */
+p:not(.p1) {
+ background-color: rgb(233, 139, 17);
+ color: black;
+}
+
+/* :checked */
+label {
+    background-color: aqua;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked + label{
+    background-color: brown;
+    color: antiquewhite;
+}
